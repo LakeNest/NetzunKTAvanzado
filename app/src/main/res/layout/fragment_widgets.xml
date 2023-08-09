@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.WidgetsFragment">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_gallery" >
+
+        <TextView
+        android:id="@+id/textGallery"
+        android:gravity="center_horizontal"
+        android:text="Pruebas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+        <VideoView
+            android:id="@+id/videoViewWeb"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+        <VideoView
+            android:id="@+id/videoViewLocal"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/descargar" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_gravity="center"
+            android:background="@color/primary"
+            android:src="@drawable/descargar"
+            app:shapeAppearanceOverlay="@style/Circular"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_gravity="center"
+            android:background="@color/primary"
+            android:src="@drawable/descargar"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5dp"
+            app:shapeAppearanceOverlay="@style/Rounded"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
