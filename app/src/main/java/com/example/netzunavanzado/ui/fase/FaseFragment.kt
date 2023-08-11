@@ -35,10 +35,6 @@ class FaseFragment : Fragment() {
         initRecycler()
 
 
-
-
-
-
         return root
     }
     fun initRecycler() {
@@ -52,15 +48,7 @@ class FaseFragment : Fragment() {
             //rvSuperHero.addItemDecoration(decoration)
         }
     }
-    private fun createUsuario() {
-        var usuario1 = Usuario(
-            "devsconocido",
-            "??????",
-        )
-        mUsuList.add(1,usuario1)
-        adapter.notifyItemInserted(1)
-        llmanager.scrollToPositionWithOffset(1,10)
-    }
+
 
     private fun itemSelected(usu: Usuario) {
         //Toast.makeText(activity, usu.nombre, LENGTH_LONG).show()
@@ -71,6 +59,16 @@ class FaseFragment : Fragment() {
             R.id.nav_detail_fase, bundle, NavOptions.Builder()
             .setPopUpTo(R.id.nav_home, true)
             .build())
+    }
+
+    private fun createUsuario() {
+        var usuario1 = Usuario(
+            "devsconocido",
+            "??????",
+        )
+        mUsuList.add(1,usuario1)
+        adapter.notifyItemInserted(1)
+        llmanager.scrollToPositionWithOffset(1,10)
     }
 
 }
