@@ -22,11 +22,20 @@
         android:name="com.example.netzunavanzado.ui.slideshow.TextviewsFragment"
         android:label="@string/menu_tvs"
         tools:layout="@layout/fragment_textviews" >
-        <argument
-            android:name="usuario"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue="nestor" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fase"
+        android:name="com.example.netzunavanzado.ui.fase.FaseFragment"
+        android:label="@string/menu_tvs"
+        tools:layout="@layout/fragment_fase" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_detail_fase"
+        android:name="com.example.netzunavanzado.ui.fase.DetailFaseFragment"
+        android:label="@string/menu_tvs"
+        tools:layout="@layout/fragment_detail_fase" >
     </fragment>
 
 </navigation>

@@ -16,5 +16,15 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_tvs" />
+
+        <item
+            android:id="@+id/nav_fase"
+            android:icon="@drawable/ic_fire"
+            android:title="Fase" />
+
+        <item
+            android:id="@+id/nav_detail_fase"
+            android:icon="@drawable/ic_fire"
+            android:title="Detail Fase" />
     </group>
 </menu>
