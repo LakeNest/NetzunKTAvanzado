@@ -1,4 +1,4 @@
-package com.example.netzunavanzado.ui.gallery
+package com.example.netzunavanzado.ui.widgets
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -50,5 +50,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation("androidx.fragment:fragment-ktx:1.5.7")
+    implementation("androidx.room:room-coroutines:2.1.0-alpha04")
 
 }

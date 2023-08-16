@@ -1,4 +1,4 @@
-package com.example.netzunavanzado.ui.fase
+package com.example.netzunavanzado.ui.detailsview
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

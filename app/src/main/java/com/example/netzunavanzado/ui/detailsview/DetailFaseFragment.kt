@@ -1,4 +1,4 @@
-package com.example.netzunavanzado.ui.fase
+package com.example.netzunavanzado.ui.detailsview
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

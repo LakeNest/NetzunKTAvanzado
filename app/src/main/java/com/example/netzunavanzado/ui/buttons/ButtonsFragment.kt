@@ -1,4 +1,4 @@
-package com.example.netzunavanzado.ui.home
+package com.example.netzunavanzado.ui.buttons
 
 
 
@@ -13,12 +13,10 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 
 import com.example.netzunavanzado.R
 import com.example.netzunavanzado.databinding.FragmentButtonsBinding
-import com.example.netzunavanzado.ui.slideshow.TextviewsFragment
 import com.google.android.material.chip.Chip
 
 
@@ -40,40 +38,27 @@ class ButtonsFragment : Fragment() {
         _binding = FragmentButtonsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val btn1 = binding.btn1
-        val btn2 = binding.btn2
-        val btn3 = binding.button3
+        val btn1 = binding.btnGoToTextViewFragment
+        val btn2 = binding.btnManageRadioButton
+        val btn3 = binding.btnAddChip
         val radioGroup = binding.radioGroup
         val draw = ContextCompat.getDrawable(
             btn3.context,
             R.drawable.bg_gradient
         )
-
-
-
+        /***Enviar datos y pasar a otro fragment***/
         btn1.setOnClickListener {
-            //Enviar datos entre fragments por Bundle
-
-
-            /*requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.nav_host_fragment_content_home, fragment)
-                .setReorderingAllowed(true)
-                .addToBackStack(null)
-                .commit()*/
-
-            /*Enviar datos y pasar a otro fragment*/
             val bundle = Bundle()
             bundle.putString("dato2", "Foo");
             val navController = findNavController()
             navController.navigate(R.id.nav_slideshow, bundle, NavOptions.Builder()
                 .setPopUpTo(R.id.nav_home, true)
                 .build())
-
-
         }
+        /***Enviar datos y pasar a otro fragment***/
 
 
-
+        /***ChipButton***/
         btn3.text = "Añadir Chip"
         btn3.background = draw
         btn3.setOnClickListener {
@@ -105,7 +90,7 @@ class ButtonsFragment : Fragment() {
                 Toast.makeText(chip.context,"${temp.text} Pulsadoxx", Toast.LENGTH_SHORT).show()
             }
         }
-
+        /***ChipButton***/
 
 
 

@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".ui.home.ButtonsFragment">
-
-
+    tools:context=".ui.buttons.ButtonsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,33 +19,33 @@
             android:id="@+id/text_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:textAlignment="center"
             android:textSize="20sp" />
 
         <android.widget.Button
-            android:id="@+id/btn1"
+            android:id="@+id/btnGoToTextViewFragment"
             android:backgroundTint="@color/primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
             android:drawableStart="@drawable/ic_menu_camera"
-            android:text="Button" />
+            android:text="Ir a TextView Fragment" />
 
         <android.widget.Button
             android:background="@drawable/bg_rectangle"
-            android:id="@+id/btn2"
+            android:id="@+id/btnManageRadioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Manejar Radio Button" />
 
         <android.widget.Button
-            android:id="@+id/button3"
+            android:id="@+id/btnAddChip"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Añadir Chips" />
+
 
         <ImageView
             android:id="@+id/imageView2"

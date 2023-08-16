@@ -1,7 +1,5 @@
 package com.example.netzunavanzado.ui
 
-import android.os.Bundle
-import com.example.netzunavanzado.ui.slideshow.TextviewsFragment
 import java.io.Serializable
 
 interface IDetailsFragmentDelegate:Serializable {

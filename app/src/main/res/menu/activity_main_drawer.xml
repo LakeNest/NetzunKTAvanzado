@@ -27,4 +27,27 @@
             android:icon="@drawable/ic_fire"
             android:title="Detail Fase" />
     </group>
+
+
+    <item android:title="Layouts">
+        <menu>
+            <item
+                android:id="@+id/nav_linear_layout"
+                android:icon="@drawable/ic_water"
+                android:title="Activity Linear" />
+            <item
+                android:id="@+id/nav_linear"
+                android:icon="@drawable/ic_water"
+                android:title="Fragment Linear" />
+            <item
+                android:id="@+id/nav_relative"
+                android:icon="@drawable/ic_water"
+                android:title="Fragment Relative" />
+            <item
+                android:id="@+id/nav_constraint"
+                android:icon="@drawable/ic_water"
+                android:title="Constraint Relative" />
+
+        </menu>
+    </item>
 </menu>
