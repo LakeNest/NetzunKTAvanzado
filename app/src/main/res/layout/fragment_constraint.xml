@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.layouts.ConstraintFragment">
+
+    <ImageView
+        android:id="@+id/ivCineplanet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llBotonesRotate"
+        android:src="@drawable/descargar"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+
+        android:id="@+id/llBotonesRotate"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/llBotonesScale"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCineplanet">
+
+        <Button
+            android:id="@+id/btnRotateAdd"
+            style="@style/Circular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+
+            android:text="+ Rotate"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnRotateMinus"
+            style="@style/Circular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:text="- Rotate"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/llBotonesScale"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/llBotonesAlpha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llBotonesRotate">
+
+        <Button
+            android:id="@+id/btnScaleAdd"
+            style="@style/Circular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:text="+ Scale"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnScaleMinus"
+            style="@style/Circular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:text="- Scale"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/llBotonesAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llBotonesScale">
+
+        <Button
+            android:id="@+id/btnAlphaAdd"
+            style="@style/Circular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:text="+ Alpha"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnAlphaMinus"
+            style="@style/Circular"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:text="- Alpha"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.layouts.RelativeFragment">
+
+    <ImageView
+        android:id="@+id/ivCineplanet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/llBotonesRotate"
+        android:src="@drawable/descargar"
+        android:contentDescription="@string/todo" />
+    <LinearLayout
+
+        android:id="@+id/llBotonesRotate"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@id/llBotonesScale"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRotateAdd"
+            android:layout_margin="4dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style = "@style/Rounded"
+            android:text="@string/rotate" />
+
+        <Button
+            android:id="@+id/btnRotateMinus"
+            android:layout_margin="4dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style = "@style/Rounded"
+            android:text="@string/rotate2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/llBotonesScale"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        style = "@style/Rounded"
+        android:layout_above="@id/llBotonesAlpha"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnScaleAdd"
+            android:layout_margin="4dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            style = "@style/Rounded"
+            android:text="@string/scale1" />
+
+        <Button
+            android:id="@+id/btnScaleMinus"
+            android:layout_margin="4dp"
+            android:layout_width="0dp"
+            style = "@style/Rounded"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/scale2" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/llBotonesAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAlphaAdd"
+            android:layout_margin="4dp"
+            android:layout_width="0dp"
+            style = "@style/Rounded"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/alpha1" />
+
+        <Button
+            android:id="@+id/btnAlphaMinus"
+            android:layout_margin="4dp"
+            android:layout_width="0dp"
+            style = "@style/Rounded"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/alpha2" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
