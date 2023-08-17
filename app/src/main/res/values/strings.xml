@@ -14,4 +14,24 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="textview">TextView</string>
+    <string name="button">Button</string>
+    <string name="todo">TODO</string>
+    <string name="boton11">Boton!!</string>
+    <string name="boton12">boton12</string>
+    <string name="boton13">boton13</string>
+    <string name="boton16">boton16</string>
+    <string name="boton17">boton17</string>
+    <string name="pruebas">Pruebas</string>
+    <string name="rotate">+ Rotate</string>
+    <string name="rotate2">- Rotate</string>
+    <string name="scale1">+ Scale</string>
+    <string name="scale2">- Scale</string>
+    <string name="alpha1">+ Alpha</string>
+    <string name="alpha2">- Alpha</string>
+    <string name="button31">Button31</string>
+    <string name="button32">Button32</string>
+    <string name="button33">Button33</string>
+    <string name="button34">Button34</string>
+    <string name="button35">Button35</string>
+
 </resources>
