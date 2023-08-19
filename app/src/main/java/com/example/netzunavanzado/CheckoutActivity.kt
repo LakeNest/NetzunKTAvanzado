@@ -159,7 +159,7 @@ class CheckoutActivity : AppCompatActivity() {
                 shippingDetails = result.address
             }
             is AddressLauncherResult.Canceled -> {
-               
+
             }
         }
     }
