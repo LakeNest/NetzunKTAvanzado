@@ -20,16 +20,19 @@
         <item
             android:id="@+id/nav_fase"
             android:icon="@drawable/ic_fire"
-            android:title="Fase" />
+            android:title="Fase"
+            tools:ignore="HardcodedText" />
 
         <item
             android:id="@+id/nav_detail_fase"
             android:icon="@drawable/ic_fire"
-            android:title="Detail Fase" />
+            android:title="Detail Fase"
+            tools:ignore="HardcodedText"/>
     </group>
 
 
-    <item android:title="Layouts">
+    <item android:title="Layouts"
+        tools:ignore="HardcodedText">
         <menu>
             <item
                 android:id="@+id/nav_linear_layout"
@@ -48,6 +51,20 @@
                 android:icon="@drawable/ic_water"
                 android:title="Constraint Relative" />
 
+        </menu>
+    </item>
+
+    <item android:title="Admob-Checkut"
+        tools:ignore="HardcodedText">
+        <menu>
+            <item
+                android:id="@+id/nav_admob"
+                android:icon="@drawable/ic_motocycle"
+                android:title="Admob" />
+            <item
+                android:id="@+id/nav_stripe"
+                android:icon="@drawable/ic_motocycle"
+                android:title="Stripe" />
         </menu>
     </item>
 </menu>

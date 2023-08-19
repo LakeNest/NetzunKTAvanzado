@@ -49,6 +49,13 @@
         tools:layout="@layout/activity_linear_layout" >
     </activity>
 
+    <activity
+        android:id="@+id/nav_stripe"
+        android:name="com.example.netzunavanzado.CheckoutActivity"
+        android:label="@string/menu_tvs"
+        tools:layout="@layout/activity_checkout" >
+    </activity>
+
     <fragment
         android:id="@+id/nav_linear"
         android:name="com.example.netzunavanzado.ui.layouts.LinearFragment"
@@ -67,6 +74,13 @@
         android:name="com.example.netzunavanzado.ui.layouts.ConstraintFragment"
         android:label="@string/menu_tvs"
         tools:layout="@layout/fragment_constraint" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_admob"
+        android:name="com.example.netzunavanzado.ui.admob.AdmobFragment"
+        android:label="@string/menu_tvs"
+        tools:layout="@layout/fragment_admob" >
     </fragment>
 
 </navigation>

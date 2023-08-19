@@ -16,8 +16,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.netzunavanzado.databinding.ActivityHomeBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.stripe.android.PaymentConfiguration
 
 
+@Suppress("unused")
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -29,6 +31,12 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.appBarHome.toolbar)
+
+        /**Inicialziacion de COnfig Pagos**/
+        PaymentConfiguration.init(
+            applicationContext,
+            "pk_test_Dt4ZBItXSZT1EzmOd8yCxonL"
+        )
 
 
         binding.appBarHome.fab.setOnClickListener { view ->
@@ -45,7 +53,8 @@ class HomeActivity : AppCompatActivity() {
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
                 R.id.nav_fase, R.id.nav_detail_fase, R.id.nav_linear_layout,
-                R.id.nav_linear, R.id.nav_relative, R.id.nav_constraint
+                R.id.nav_linear, R.id.nav_relative, R.id.nav_constraint,
+                R.id.nav_admob, R.id.nav_stripe
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

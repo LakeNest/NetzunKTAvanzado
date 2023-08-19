@@ -2,6 +2,8 @@ package com.example.netzunavanzado.ui.buttons
 
 
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.example.netzunavanzado.CheckoutActivity
 
 import com.example.netzunavanzado.R
 import com.example.netzunavanzado.databinding.FragmentButtonsBinding
@@ -27,13 +30,14 @@ class ButtonsFragment : Fragment() {
     private val binding get() = _binding!!
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val homeViewModel =
-            ViewModelProvider(this).get(ButtonsViewModel::class.java)
+            ViewModelProvider(this)[ButtonsViewModel::class.java]
 
         _binding = FragmentButtonsBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -49,7 +53,7 @@ class ButtonsFragment : Fragment() {
         /***Enviar datos y pasar a otro fragment***/
         btn1.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("dato2", "Foo");
+            bundle.putString("dato2", "Foo")
             val navController = findNavController()
             navController.navigate(R.id.nav_slideshow, bundle, NavOptions.Builder()
                 .setPopUpTo(R.id.nav_home, true)
@@ -57,9 +61,12 @@ class ButtonsFragment : Fragment() {
         }
         /***Enviar datos y pasar a otro fragment***/
 
-
+        val btnPay = binding.btnActPayment
+        btnPay.setOnClickListener {
+            initPay()
+        }
         /***ChipButton***/
-        btn3.text = "Añadir Chip"
+        btn3.text = "Add Chip"
         btn3.background = draw
         btn3.setOnClickListener {
             addChip()
@@ -107,16 +114,12 @@ class ButtonsFragment : Fragment() {
         _binding = null
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
+    @SuppressLint("SetTextI18n")
     private fun addChip(){
         val chipGroup = binding.chipGroup
         val chip = Chip(chipGroup.context)
-        chip.text = "Nuevo Chip"
-        chip.chipIcon = ContextCompat.getDrawable(chipGroup.context, com.example.netzunavanzado.R.drawable.ic_fire)
+        chip.text = "New Chip"
+        chip.chipIcon = ContextCompat.getDrawable(chipGroup.context, R.drawable.ic_fire)
         chip.isCloseIconVisible = true
 
         chip.setOnCloseIconClickListener {
@@ -127,5 +130,10 @@ class ButtonsFragment : Fragment() {
             Toast.makeText(chip.context,"${chip.text} Pulsado", Toast.LENGTH_SHORT).show()
         }
         chipGroup.addView(chip)
+    }
+
+    private fun initPay() {
+        val editProfileIntent = Intent(activity, CheckoutActivity::class.java)
+        activity?.startActivity(editProfileIntent)
     }
 }

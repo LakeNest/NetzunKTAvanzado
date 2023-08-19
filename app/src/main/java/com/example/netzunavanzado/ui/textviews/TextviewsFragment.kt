@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.netzunavanzado.databinding.FragmentTextviewsBinding
 
+
+@Suppress("UNUSED_VARIABLE")
 class TextviewsFragment : Fragment() {
 
     private var _binding: FragmentTextviewsBinding? = null
@@ -22,19 +24,17 @@ class TextviewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val slideshowViewModel =
-            ViewModelProvider(this).get(TextviewsViewModel::class.java)
+            ViewModelProvider(this)[TextviewsViewModel::class.java]
 
         _binding = FragmentTextviewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        /*val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+
+
+        /***Recibir datos entre fragments por Bundle***/
+        val getDato2 = arguments?.getString("dato2")
 
         val textView2 = binding.textView2
-        /*Recibir datos entre fragments por Bundle*/
-        val getDato2 = arguments?.getString("dato2")
         textView2.text = getDato2
 
 
